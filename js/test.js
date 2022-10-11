@@ -1,17 +1,15 @@
-let str = 'Hello';
-
-function changeString(str) {
-    let newStr = '';
-    for (let i = 0; i < str.length; i++) {
-        if (i != 2) {
-            newStr += str[i];
-            console.log(str[i]);
-
-        } else {
-            newStr += 'w';
-            console.log(newStr[i]);
-        }
-    }
+let str = 'HelloHelloHello';
+let target = 'Hell';
+let pos = 0;
+let count = 0;
+while (true) {
+    
+    let foundPos = str.indexOf(target, pos);
+    if (foundPos == -1) {
+        console.log(`Founded ${count} positions`);
+        break;
+    };
+    console.log(`Founded there: ${foundPos}`);
+    pos = foundPos + 1;
+    count++;
 }
-
-changeString(str);
