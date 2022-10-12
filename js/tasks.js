@@ -35,8 +35,20 @@ console.log(checkSpam(string)); */
     return str;
 } */
 
-function trancate(str, maxlength) {
+/* function trancate(str, maxlength) {
     return (str.length > maxlength) ? str.slice(0, maxlength - 1) + '…' : str;
 }
 
-console.log(trancate('Hello!', 5))
+console.log(trancate('Hello!', 5)) */
+
+// 4
+
+function extractCurrencyValue(str) {
+    let num = '';
+    for (let i = 0; i < str.length; i++) {
+        if (!isNaN(str[i])) { num += str[i] }
+    }
+    return +num;
+}
+
+console.log(extractCurrencyValue('$120'))
